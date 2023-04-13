@@ -6,13 +6,14 @@ $dark-color:#2C2828;
 
 html{
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 
 body{
     margin: 0;
     padding: 0;
+    overflow: hidden;
     box-sizing: border-box;
     background-color: $dark-color
 }
