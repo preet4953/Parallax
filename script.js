@@ -1,4 +1,4 @@
-// const hamburger=document.querySelector('.hamburger');
+const hamburger=document.querySelector('.hamburger');
 const nav=document.getElementsByClassName('nav')[0];
 const form=document.getElementsByTagName('form')[0];
 // var limitFunc = function(){
@@ -28,17 +28,17 @@ const form=document.getElementsByTagName('form')[0];
 
 
 
-// hamburger.addEventListener('click',function(){
+hamburger.addEventListener('click',function(){
 
     
-//     this.classList.toggle('is-active');
+    this.classList.toggle('is-active');
     
-//     if(nav.style.display==='block'){
-//      nav.style.display='';   
-//     }else{
-//         nav.style.display='block'
-//     }
-// });
+    if(nav.style.display==='block'){
+     nav.style.display='';   
+    }else{
+        nav.style.display='block'
+    }
+});
 
 // window.addEventListener("resize", limitFunc);
 

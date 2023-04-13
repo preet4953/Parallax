@@ -1,6 +1,7 @@
 #banner{
     padding: 0;
-    height: 100vh;
+    height: 80vh;
+    z-index: -1;
     display: flex;
     justify-content: space-evenly;
     background-color: $background-color;
