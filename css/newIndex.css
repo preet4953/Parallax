@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -174,84 +175,106 @@ body {
   fill: #2C2828;
 }
 
-#afterBanner {
+@media (max-width: 800px) {
+  #banner {
+    padding: 0;
+    height: 80vh;
+    display: flex;
+    background-color: #800020;
+    position: relative;
+  }
+  #banner #textDiv {
+    display: none;
+  }
+  #banner #imageContainer {
+    width: 200px;
+    height: 250px;
+    padding: 20px;
+    background-image: url(/Assets/oneCardPic.jpg);
+    background-size: cover;
+    background-position: center;
+    border: 15px solid #585481;
+    border-radius: 80%;
+    background-repeat: no-repeat;
+  }
+}
+#timelineWrapper {
   display: flex;
   justify-content: center;
-  background-color: #2C2828;
-  color: #bbb6df;
-}
-#afterBanner h1 {
-  font-size: 3rem;
-}
-#afterBanner ul {
-  padding: 50px 0;
-}
-#afterBanner ul li {
-  position: relative;
-  list-style-type: none;
-  width: 6px;
-  background-color: #800020;
-  margin: 0 auto;
-  padding-top: 50px;
-}
-#afterBanner ul li div {
-  position: relative;
-  width: 400px;
-  padding: 15px;
-  border-radius: 5px;
-  bottom: 0;
-  background: #585481;
-}
-#afterBanner ul li::after {
-  background: #800020;
-  content: "";
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-}
-#afterBanner ul li:nth-child(odd) div {
-  left: 45px;
-}
-#afterBanner ul li:nth-child(even) div {
-  left: -445px;
-}
-#afterBanner time {
-  font-weight: bold;
-  font-size: 18px;
-  display: block;
-  margin-bottom: 10px;
-  color: #f4f3ee;
-}
-#afterBanner ul li div {
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-}
-#afterBanner ul li:nth-child(odd) div {
-  transform: translate3d(200px, 0, 0);
-}
-#afterBanner ul li:nth-child(even) div {
-  transform: translate3d(-200px, 0, 0);
-}
-#afterBanner ul li.show div {
-  transform: none;
-  visibility: visible;
-  opacity: 1;
-}
-@media screen and (max-width: 900px) {
-  #afterBanner ul li div {
-    width: 250px;
-  }
-  #afterBanner ul li:nth-child(even) div {
-    left: -289px;
-    /*250+45-6*/
-  }
 }
 
+.timeline {
+  width: 800px;
+  background-color: #585481;
+  color: #bbb6df;
+  padding: 30px 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.timeline ul {
+  list-style-type: none;
+  border-left: 2px solid #800020;
+  padding: 10px 5px;
+}
+
+.timeline ul li {
+  padding: 20px 20px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.timeline ul li span {
+  display: inline-block;
+  background-color: #800020;
+  border-radius: 25px;
+  padding: 2px 5px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.timeline ul li .content h3 {
+  color: #f4f3ee;
+  font-size: 17px;
+  padding-top: 5px;
+}
+
+.timeline ul li .content p {
+  padding: 5px 0px 15px 0px;
+  font-size: 15px;
+}
+
+.timeline ul li:before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #800020;
+  border-radius: 50%;
+  left: -11px;
+  top: 28px;
+  transition: 0.5s;
+}
+
+.timeline ul li:hover {
+  background-color: #071f2a;
+}
+
+.timeline ul li:hover:before {
+  background-color: #0F0;
+  box-shadow: 0px 0px 10px 2px #0F0;
+}
+
+@media (max-width: 300px) {
+  .timeline {
+    width: 100%;
+    padding: 30px 5px 30px 10px;
+  }
+  .timeline ul li .content h3 {
+    color: #34ace0;
+    font-size: 15px;
+  }
+}
 #skillsSection {
   display: flex;
   flex-direction: column;
@@ -353,6 +376,12 @@ body {
     width: 100%;
   }
 }
+@media (max-width: 800px) {
+  #wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .formContainer {
   display: flex;
   justify-content: center;
@@ -415,6 +444,11 @@ textarea {
   background: #585481;
 }
 
+@media (max-width: 800px) {
+  .formContainer {
+    height: fit-content;
+  }
+}
 #foot {
   height: 80vh;
   background-color: #800020;

@@ -56,3 +56,10 @@
     font-weight:700;
   }
   [type="submit"]:hover { background:$purple; }
+
+  @media (max-width:800px) {
+    .formContainer{
+      height: fit-content;
+    }
+    
+  }

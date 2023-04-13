@@ -1,11 +1,28 @@
 const hamburger=document.querySelector('.hamburger');
 const nav=document.getElementsByClassName('nav')[0];
-
+const form=document.getElementsByTagName('form')[0];
 // var limitFunc = function(){
 //     if (window.innerWidth>800 && nav.style.display==="none"){
 //        nav.style.display="";
 //     }
 // };
+var removeClass = function(){
+  if(window.innerWidth < 800){
+    form.className='';
+  }
+}
+
+
+window.addEventListener('resize',removeClass);
+
+
+
+
+
+
+
+
+
 
 hamburger.addEventListener('click',function(){
 

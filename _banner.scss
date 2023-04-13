@@ -51,3 +51,34 @@
     }
    
 }
+
+@media (max-width:800px) {
+    #banner{
+        padding: 0;
+        height: 80vh;
+        display: flex;
+        background-color: $background-color;
+        position: relative;
+        
+        #textDiv{
+            display: none;
+        }
+        #imageContainer{
+            width: 200px;
+            height: 250px;
+            padding: 20px;
+            background-image:url(/Assets/oneCardPic.jpg);    
+            background-size:cover;
+            background-position: center;
+            border: 15px solid $purple;
+            border-radius: 80%;
+            background-repeat: no-repeat;
+        }
+    
+
+
+
+
+    
+}
+}

@@ -6,6 +6,7 @@ $dark-color:#2C2828;
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 
@@ -18,7 +19,7 @@ body{
 
 @import './navBar';
 @import './banner.scss';
-@import './afterBanner.scss';
+@import './timeline.scss';
 @import './skills.scss';
 @import './contactForm.scss';
 @import './footer';  

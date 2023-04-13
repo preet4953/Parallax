@@ -96,3 +96,12 @@
       width: 100%;
     }
   }
+
+
+@media (max-width:800px) {
+  #wrapper{
+    display:flex;
+    flex-direction: column;
+  }
+  
+}
