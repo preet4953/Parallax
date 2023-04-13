@@ -190,6 +190,7 @@ body {
   #banner #imageContainer {
     width: 200px;
     height: 250px;
+    margin-top: 10px;
     padding: 20px;
     background-image: url(../assets/oneCardPic.JPG);
     background-size: cover;

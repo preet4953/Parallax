@@ -6,14 +6,18 @@ const form=document.getElementsByTagName('form')[0];
 //        nav.style.display="";
 //     }
 // };
-var removeClass = function(){
-  if(window.innerWidth < 800){
-    form.className='';
-  }
-}
+// var removeClass = function(){
+//   if(window.innerWidth < 900){
+    
+//     for(let l=0;l<elements.length-1;l++){
+//       console.log(l);
+//       elements[l].classList.removeClass('rellax');
+//     }
+//   }
+// }
 
 
-window.addEventListener('resize',removeClass);
+// window.addEventListener('resize',removeClass);
 
 
 
