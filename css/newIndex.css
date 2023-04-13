@@ -1,12 +1,12 @@
 html {
   scroll-behavior: smooth;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   box-sizing: border-box;
   background-color: #2C2828;
 }
