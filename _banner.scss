@@ -1,0 +1,53 @@
+#banner{
+    padding: 0;
+    height: 80vh;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: $background-color;
+    position: relative;
+    
+    #textDiv{
+        height: 400px;
+    }
+    #bannerTitle{
+        color: $font;
+        font-size: 5rem;
+    }
+    #bannerDiscription{
+        color: $font;
+        font-size: 1.9rem;
+    }
+    #imageContainer{
+        width: 300px;
+        height: 350px;
+        padding: 20px;
+        background-image:url(/Assets/oneCardPic.jpg);    
+        background-size:cover;
+        background-position: center;
+        border: 15px solid $purple;
+        border-radius: 80%;
+        background-repeat: no-repeat;
+    }
+    
+    #custom-shape-divider-bottom-1680985168 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+    
+    #custom-shape-divider-bottom-1680985168 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 190px;
+    }
+    
+    #custom-shape-divider-bottom-1680985168 .shape-fill {
+        fill: $dark-color;
+    }
+   
+}

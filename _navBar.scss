@@ -1,0 +1,124 @@
+
+.header{
+    background-color: $background-color;
+    text-align: center;
+    position: sticky;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    z-index: 999;
+    .Logo{
+        color: $font;
+        margin: 0;
+        font-size: 2rem;
+    }
+    
+    .nav{
+    background-color: $background-color;
+    width: 100%;
+
+    display: none;
+    transition: transform 400ms ease-in-out;
+    }    
+}
+
+.menu{
+    list-style:none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 200px;
+    margin: 0;
+    li{
+        /* margin-bottom: 1rem; */
+       /*margin-left: 1rem; */
+       text-align: center;
+       padding: 5px;
+       color: $font;
+       font-size: 1.2rem;
+       a{
+        text-decoration: none;
+        color: $font;
+       }
+       &:hover{
+            background-color: $purple;
+            border-radius: 5px;
+            color:$font;
+
+       }
+   }
+}
+
+.hamburger{
+    position: absolute;
+    top:10px;
+    display: block;
+    appearance: none;
+    border: none;
+    outline: none;
+    align-items: center;
+    background:none;
+    &:hover > span:nth-child(2){
+        transform: translateX(10px);
+        background: $purple;
+    } 
+    span{
+        display: block;
+        width: 33px;
+        height:3px;
+        margin-bottom: 4px;
+        border-radius: 6px;
+        z-index: 1;
+        background:$font;
+        transition: 0.4s;
+    }
+} 
+
+.hamburger.is-active > span:nth-child(2){
+    opacity: 0;
+    transform: translateX(15px);
+} 
+
+.hamburger.is-active > span:nth-child(1){
+    transform: translate(0px,9px) rotate(48deg);
+} 
+.hamburger.is-active > span:nth-child(3){
+    transform: translate(-2px,-5px) rotate(-48deg)
+} 
+.hamburger.is-active:hover > span{
+    background-color: $purple;
+} 
+
+
+
+// Only for NavBar
+@media (min-width:800px) {
+    .hamburger{
+        display: none;
+    }
+    .header{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .Logo{
+            color: $font;
+            margin-top: 0;
+        }    
+        .nav{
+            all: unset;
+            .menu{
+                all: unset;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                list-style:none;
+                padding: 0;
+                color: $font;
+                
+            }     
+        }
+    
+    }
+    
+}

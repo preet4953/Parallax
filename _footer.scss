@@ -1,0 +1,82 @@
+#foot{
+    height: 80vh;
+    background-color: $background-color;
+}
+//shape divider
+.shapeWrapper{
+    position: relative;
+}
+.custom-shape-divider-top-1681152168 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1681152168 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 190px;
+}
+
+.custom-shape-divider-top-1681152168 .shape-fill {
+    fill:$dark-color;
+}
+//shape divider ends
+
+footer{
+    position: relative;
+    top: 300px;
+    overflow: hidden;
+    font-family: 'Play', sans-serif;
+    text-align:center;
+    .row{
+        width:100%;
+        margin:1% 0%;
+        padding:0.6% 0%;
+        color:$light;
+        font-size:0.8em;
+        ul{
+            width:100%;
+            
+            li{
+                display:inline-block;
+                margin:0px 30px;
+                }
+            }
+        a{
+            text-decoration:none;
+            color:$light;
+            font-size: 1.5rem;
+            transition:0.5s;
+            &:hover{
+                color:$purple;
+                }    
+        }
+            
+        }
+    }
+    .footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+    }
+    
+    @media (max-width:720px){
+    .footer{
+    text-align:left;
+    padding:5%;
+    }
+    .footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .row a i{
+    margin:0% 3%;
+    }
+    }
+    
+    
